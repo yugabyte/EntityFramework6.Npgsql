@@ -1,16 +1,8 @@
 <Project>
-  <ItemGroup Condition="'$(TargetFramework)' != 'net45'">
+  <ItemGroup>
     <!-- Any update of these version must be accompanied by the appropriate
          change in EF6.PG/content -->
-    <PackageReference Update="Npgsql" Version="4.1.3" />
-    <PackageReference Update="Npgsql.LegacyPostgis" Version="4.1.3" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
-    <!-- Any update of these version must be accompanied by the appropriate
-         change in EF6.PG/content -->
-    <PackageReference Update="Npgsql" Version="4.0.10" />
-    <PackageReference Update="Npgsql.LegacyPostgis" Version="4.0.10" />
+    <PackageReference Update="NpgsqlYugabyteDB" Version="6.0.10-yb-1-beta" />
   </ItemGroup>
 
   <ItemGroup>
