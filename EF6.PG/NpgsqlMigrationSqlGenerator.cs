@@ -8,6 +8,7 @@ using System.Data.Entity.Core.Metadata.Edm;
 using System.Data.Entity.Spatial;
 using System.Linq;
 using JetBrains.Annotations;
+using System.Text.RegularExpressions;
 
 namespace Npgsql
 {
@@ -33,7 +34,8 @@ namespace Npgsql
             _migrationStatments = new List<MigrationStatement>();
             _addedSchemas = new List<string>();
             _addedExtensions = new List<string>();
-            _serverVersion = new Version(providerManifestToken);
+            string providerManifestTokenYB = Regex.Split(providerManifestToken, "-YB")[0];         
+            _serverVersion = new Version(providerManifestTokenYB);
             Convert(migrationOperations);
             return _migrationStatments;
         }
