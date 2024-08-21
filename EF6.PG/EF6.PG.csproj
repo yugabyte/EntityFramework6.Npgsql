@@ -10,6 +10,7 @@
     <TargetFrameworks>net45;net461;netstandard21</TargetFrameworks>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <NoWarn>CS1591</NoWarn>
+	<WarningsNotAsErrors>NU1901;NU1902;NU1903;NU1904</WarningsNotAsErrors>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <RootNamespace>Npgsql</RootNamespace>
     <AssemblyName>EntityFramework6.Npgsql</AssemblyName>
@@ -50,7 +51,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Npgsql" />
+	<PackageReference Include="Npgsql" />
     <PackageReference Include="EntityFramework" />
   </ItemGroup>
 </Project>
